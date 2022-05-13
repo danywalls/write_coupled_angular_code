@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Beer } from './beer';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class ApiService {
   private _endpoint = 'https://api.punkapi.com/v2/beers';
   private _beers$ = new BehaviorSubject<any>({});
